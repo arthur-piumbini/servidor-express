@@ -29,7 +29,7 @@ app.post('/usuario1', (req, res) => {
 })
 
 app.get('/teste', (req, res) => {
-    res.json({"mensagem": "testeeteeeeeeeeetetetetetetet"})
+    res.json({"mensagem": "teste"})
 })
 
 app.listen(port, () => {
