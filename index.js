@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const route1 = require('./routes/route1')
 
 app.use(express.json())
 
@@ -34,4 +35,10 @@ app.get('/teste', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
+})
+
+app.use('/route1', route1) //chamar a route de fora
+
+app.get('/routeteste', (req, res) => {  //rota com o msm nome da rota de fora, porem nao dá erro
+  res.send("PAPAPAPAAPPAPAPAPAAPAAAP")
 })
